@@ -35,4 +35,4 @@ def index():
 
 if __name__ == "__main__":
     app.logger.debug("Starting Flask app")
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=8000)
