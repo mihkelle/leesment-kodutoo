@@ -7,6 +7,7 @@ server_ip = "4.211.158.21"
 server_port = 80
 
 
+# Tervisekontrolli lõpp-punkt
 @app.route("/health")
 def health():
     return "OK"
