@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-server_ip = "<YOUR_VM_PUBLIC_IP>"
+server_ip = "4.211.158.21"
 server_port = 80
 
 
