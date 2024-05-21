@@ -7,13 +7,19 @@ server_ip = "4.211.158.21"
 server_port = 80
 
 
+@app.route("/health")
+def health():
+    return "OK"
+
+
 @app.route("/")
 def index():
     try:
         response = requests.get(f"http://{server_ip}:{server_port}")
+        response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
-        return str(e)
+        return str(e), 500
 
 
 if __name__ == "__main__":
